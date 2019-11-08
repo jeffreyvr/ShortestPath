@@ -57,9 +57,11 @@ public class ShortestPath {
 
         // If we couldn't find a path, the destination node
         // won't have been added to our parents set
-        if (parents.get(b) == null) return null;
+        if (parents.get(b) == null) {
+            return null;
+        }
 
-        // Create the output list and add the path to the list
+        // Create the result list and add the path to the list
         List<Node> result = new LinkedList<Node>();
         Node node = b;
         while (node != null) {

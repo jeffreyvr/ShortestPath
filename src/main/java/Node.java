@@ -15,14 +15,16 @@ public class Node {
     }
 
     /**
-     * Adding child to node
+     * Adding child to this node
+     *
+     * If there are no children yet, it will also
+     * create a new instance of a LinkedList.
      *
      * @param node Child node
      */
     public void addChild(Node node) {
-        // If children is empty, we first create the LinkedList
         if (this.children == null){
-            this.children = new LinkedList<Node>();
+            this.children = new LinkedList<>();
         }
         this.children.add(node);
     }
